@@ -1,0 +1,23 @@
+Atividade 10 - Faça um programa em C que calcule a decomposição de um número inteiro qualquer em unidade, dezena, centena e milhar (ex.: 5637 é decomposto em 7 unidades, 3 dezenas, 6 centenas e 5 milhares).
+
+#include <stdio.h>
+
+int main() {
+    int numero, unidade, dezena, centena, milhar;
+    
+    printf("Digite um número inteiro de 4 dígitos:\n");
+    scanf("%d", &numero);
+    
+    unidade = numero % 10;
+    dezena = (numero / 10) % 10;
+    centena = (numero / 100) % 10;
+    milhar = (numero / 1000) % 10;
+    
+    printf("O número %d é composto por %d milhares, %d centenas, %d dezenas e %d unidades.\n", numero, milhar, centena, dezena, unidade);
+    
+    return 0;
+}
+
+Explicação: 
+
+Neste exemplo, o usuário é solicitado a digitar um número inteiro de 4 dígitos. O número é lido utilizando a função scanf(). Em seguida, são realizadas operações aritméticas para obter as unidades, dezenas, centenas e milhares do número. A decomposição é armazenada em variáveis separadas. Por fim, o resultado é exibido na tela utilizando a função printf().
