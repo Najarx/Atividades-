@@ -1,0 +1,42 @@
+Atvidade 6 - Faça um programa em C que calcule as raízes de uma equação do 2° grau através da fórmula de Bhaskara (-b +/- raiz_quadrada(b² - 4ac)/2a). 
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, delta, x1, x2;
+    
+    printf("Digite os coeficientes da equacao: \n");
+    printf("a: ");
+    scanf("%f", &a);
+    printf("b: ");
+    scanf("%f", &b);
+    printf("c: ");
+    scanf("%f", &c);
+    
+    delta = pow(b, 2) - 4 * a * c;
+    
+    if (delta < 0) {
+        printf("A equacao nao possui raizes reais.\n");
+    }
+    else if (delta == 0) {
+        x1 = -b / (2 * a);
+        printf("A equacao possui apenas uma raiz real: %.2f\n", x1);
+    }
+    else {
+        x1 = (-b + sqrt(delta)) / (2 * a);
+        x2 = (-b - sqrt(delta)) / (2 * a);
+        printf("As raizes da equacao sao: x1 = %.2f e x2 = %.2f\n", x1, x2);
+    }
+    
+    return 0;
+}
+
+O programa começa declarando cinco variáveis: a, b, c, delta, x1 e x2 do tipo float.
+Em seguida, utiliza a função printf() para exibir uma mensagem na tela solicitando ao usuário que digite os coeficientes da equação do 2º grau.
+A função scanf() é utilizada para ler as entradas do usuário e armazená-las nas variáveis a, b e c.
+O valor de delta é calculado de acordo com a fórmula b² - 4ac.
+É feita uma verificação para saber se a equação possui raízes reais. Se delta for menor que zero, a equação não possui raízes reais. Caso contrário, prossegue para o próximo passo.
+Se delta for igual a zero, a equação possui apenas uma raiz real, que é calculada de acordo com a fórmula -b / 2a. O valor da raiz é armazenado na variável x1.
+Caso delta seja maior que zero, a equação possui duas raízes reais, que são calculadas de acordo com a fórmula (-b +/- raiz_quadrada(b² - 4ac)) / 2a. Os valores das raízes são armazenados nas variáveis x1 e x2.
+Por fim, o programa utiliza a função printf() para exibir as raízes da equação na tela, formatadas com duas casas decimais.
