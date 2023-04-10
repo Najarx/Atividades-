@@ -1,0 +1,25 @@
+Atividade 3 - Faça um programa em C que calcule o perímetro de uma pizza (P = 2 x PI x r). Considere o raio um número inteiro e a constante PI igual a 3,1416.
+
+#include <stdio.h>
+
+int main() {
+    int raio;
+    float pi = 3.1416, perimetro;
+    
+    printf("Digite o raio da pizza: ");
+    scanf("%d", &raio);
+    
+    perimetro = 2 * pi * raio;
+    
+    printf("O perimetro da pizza e: %.2f\n", perimetro);
+    
+    return 0;
+}
+
+
+O programa começa declarando três variáveis: raio do tipo int, e pi e perimetro do tipo float.
+Em seguida, utiliza a função printf() para exibir uma mensagem na tela solicitando ao usuário que digite o raio da pizza.
+A função scanf() é utilizada para ler a entrada do usuário e armazená-la na variável raio.
+O valor da constante PI é armazenado na variável pi.
+O perímetro da pizza é calculado de acordo com a fórmula 2 x PI x raio, e o resultado é armazenado na variável perimetro.
+Por fim, o programa utiliza a função printf() para exibir o perímetro da pizza na tela, formatado com duas casas decimais.
