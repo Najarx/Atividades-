@@ -1,0 +1,32 @@
+ATIVIDADE 1 - Faça um programa em C que calcule a média final a partir da fórmula (0,4 x A1) + (0,6 x A2). Considere A1 e A2 números reais entre 0 a 10.
+
+#include <stdio.h>
+
+int main() {
+    float a1, a2, media;
+    
+    printf("Digite a nota A1 (entre 0 e 10): ");
+    scanf("%f", &a1);
+    
+    printf("Digite a nota A2 (entre 0 e 10): ");
+    scanf("%f", &a2);
+    
+    media = (0.4 * a1) + (0.6 * a2);
+    
+    printf("A media final e: %.2f\n", media);
+    
+    return 0;
+}
+
+Explicação: 
+
+Primeiro, o programa declara três variáveis do tipo float: a1, a2 e media.
+Em seguida, o programa utiliza a função printf() para exibir uma mensagem na tela solicitando ao usuário que digite a nota A1.
+A função scanf() é utilizada para ler a entrada do usuário e armazená-la na variável a1.
+O processo se repete para a nota A2.
+A média final é calculada de acordo com a fórmula (0,4 x A1) + (0,6 x A2) e armazenada na variável media.
+Por fim, o programa utiliza a função printf() para exibir a média final na tela, formatada com duas casas decimais.
+
+
+
+
