@@ -1,0 +1,26 @@
+Atividade 5 - um programa em C que converta um valor qualquer em Gigabytes para um valor em bytes (1GB = 1024³Bytes).
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double gb, bytes;
+    double const KB = 1024.0;
+    
+    printf("Digite o valor em Gigabytes: ");
+    scanf("%lf", &gb);
+    
+    bytes = gb * pow(KB, 3);
+    
+    printf("%.2f GB equivale a %.0f bytes\n", gb, bytes);
+    
+    return 0;
+}
+Explicação:
+
+O programa começa declarando duas variáveis: gb e bytes do tipo double.
+Também é declarada uma constante KB do tipo double, com o valor de 1024, que representa a quantidade de bytes em um Kilobyte.
+Em seguida, utiliza a função printf() para exibir uma mensagem na tela solicitando ao usuário que digite o valor em Gigabytes.
+A função scanf() é utilizada para ler a entrada do usuário e armazená-la na variável gb.
+O valor em bytes é calculado de acordo com a fórmula GB * (1024³ Bytes/1 GB), que é o mesmo que GB * (1024 * 1024 * 1024 Bytes), e o resultado é armazenado na variável bytes.
+Por fim, o programa utiliza a função printf() para exibir o valor em Gigabytes e o valor correspondente em bytes na tela, formatado com duas casas decimais para o valor em Gigabytes e sem casas decimais para o valor em bytes.
