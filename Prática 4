@@ -1,0 +1,24 @@
+Atividade 4 - Faça um programa que C que calcule os impostos incluídos no preço de um produto (preço final = (1 + ICMS + COFINS + PIS/PASEP) x preço inicial). Considere ICMS igual a 17%, COFINS igual a 7,6% e PIS/PASEP igual a 1,65%.
+
+#include <stdio.h>
+
+int main() {
+    float preco_inicial, preco_final, icms = 0.17, cofins = 0.076, pis_pasep = 0.0165;
+    
+    printf("Digite o preco inicial do produto: ");
+    scanf("%f", &preco_inicial);
+    
+    preco_final = (1 + icms + cofins + pis_pasep) * preco_inicial;
+    
+    printf("O preco final do produto, com os impostos incluidos, e: %.2f\n", preco_final);
+    
+    return 0;
+}
+
+Explicação: 
+
+O programa começa declarando quatro variáveis: preco_inicial e preco_final do tipo float, e icms, cofins e pis_pasep do tipo float, já com os valores das respectivas porcentagens em forma decimal.
+Em seguida, utiliza a função printf() para exibir uma mensagem na tela solicitando ao usuário que digite o preço inicial do produto.
+A função scanf() é utilizada para ler a entrada do usuário e armazená-la na variável preco_inicial.
+O preço final do produto é calculado de acordo com a fórmula (1 + ICMS + COFINS + PIS/PASEP) x preço inicial, e o resultado é armazenado na variável preco_final.
+Por fim, o programa utiliza a função printf() para exibir o preço final do produto, com os impostos incluídos, na tela, formatado com duas casas decimais.
