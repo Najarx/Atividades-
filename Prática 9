@@ -1,0 +1,20 @@
+Atividade 9 - Faça um programa em C que converta uma idade expressa em anos, meses e dias para um valor em dias. Considere um ano com 365 dias e um mês com 30 dias
+
+#include <stdio.h>
+
+int main() {
+    int anos, meses, dias, idade_em_dias;
+    
+    printf("Digite a idade em anos, meses e dias:\n");
+    scanf("%d %d %d", &anos, &meses, &dias);
+    
+    idade_em_dias = anos * 365 + meses * 30 + dias;
+    
+    printf("A idade digitada equivale a %d dias.\n", idade_em_dias);
+    
+    return 0;
+}
+
+Neste exemplo, o usuário é solicitado a digitar a idade em anos, meses e dias. Esses valores são lidos utilizando a função scanf(). Em seguida, é realizada a conversão para dias utilizando a fórmula idade_em_dias = anos * 365 + meses * 30 + dias. Por fim, o resultado é exibido na tela utilizando a função printf().
+
+
