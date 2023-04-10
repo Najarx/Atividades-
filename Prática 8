@@ -1,0 +1,38 @@
+Atvidadede 8 - Faça um programa em C que calcule a altura alcançada por um avião após ter percorrido uma certa distância (seno(ângulo) = altura/distância). Considere o ângulo de inclinação do avião menor ou igual a 45°.
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float angulo, distancia, altura;
+    
+    printf("Digite o angulo de inclinacao do aviao (em graus): ");
+    scanf("%f", &angulo);
+    
+    if (angulo > 45) {
+        printf("O angulo de inclinacao do aviao deve ser menor ou igual a 45 graus.\n");
+        return 1;
+    }
+    
+    printf("Digite a distancia percorrida pelo aviao: ");
+    scanf("%f", &distancia);
+    
+    altura = distancia * sin(angulo * M_PI / 180);
+    
+    printf("A altura alcançada pelo aviao é de: %.2f metros.\n", altura);
+    
+    return 0;
+}
+
+Explicação: 
+
+O programa começa declarando três variáveis: angulo, distancia e altura do tipo float.
+Utiliza a função printf() para exibir uma mensagem na tela solicitando ao usuário que digite o ângulo de inclinação do avião em graus.
+A função scanf() é utilizada para ler a entrada do usuário e armazená-la na variável angulo.
+É feita uma verificação para garantir que o ângulo de inclinação do avião seja menor ou igual a 45 graus. Se o ângulo for maior que 45 graus, o programa exibe uma mensagem de erro e encerra a execução.
+O programa utiliza a função printf() novamente para solicitar ao usuário que digite a distância percorrida pelo avião.
+A função scanf() é utilizada para ler a entrada do usuário e armazená-la na variável distancia.
+A altura alcançada pelo avião é calculada de acordo com a fórmula: altura = distancia * seno(angulo). Para utilizar a função sin() da biblioteca math.h, é necessário converter o ângulo de graus para radianos. Isso é feito multiplicando o valor do ângulo por M_PI / 180.
+Por fim, o programa utiliza a função printf() para exibir a altura alcançada pelo avião na tela, formatada com duas casas decimais.
+
+
