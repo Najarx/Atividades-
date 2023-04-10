@@ -1,0 +1,29 @@
+Atividade 2 - Faça um programa em C que calcule a área de um triângulo (a = base x altura / 2). Considere base e altura números inteiros maior que 0.
+
+#include <stdio.h>
+
+int main() {
+    int base, altura;
+    float area;
+    
+    printf("Digite a base do triangulo: ");
+    scanf("%d", &base);
+    
+    printf("Digite a altura do triangulo: ");
+    scanf("%d", &altura);
+    
+    area = (base * altura) / 2.0;
+    
+    printf("A area do triangulo e: %.2f\n", area);
+    
+    return 0;
+}
+
+Explicação:
+
+•	O programa começa declarando três variáveis: base e altura do tipo 
+•	int, e area do tipo float.
+•	Em seguida, utiliza a função printf() para exibir mensagens na tela solicitando ao usuário que digite a base e a altura do triângulo.
+•	A função scanf() é utilizada para ler as entradas do usuário e armazená-las nas variáveis base e altura.
+•	A área do triângulo é calculada de acordo com a fórmula (base x altura) / 2, e o resultado é armazenado na variável area.
+•	Por fim, o programa utiliza a função printf() para exibir a área do triângulo na tela, formatada com duas casas decimais. Note que usamos 2.0 na divisão para forçar a conversão para float e assim garantir que a área seja representada com casas decimais, caso contrário o resultado seria truncado para um valor inteiro.
